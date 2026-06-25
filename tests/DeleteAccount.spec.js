@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const createdUser = require('../test-data/createdUser.json');
+const createdUser = require('../test-data/CreatedUser.json');
 const DeleteAccountPage = require('../pages/DeleteAccount')
 const LoginPage = require('../pages/Login');
 

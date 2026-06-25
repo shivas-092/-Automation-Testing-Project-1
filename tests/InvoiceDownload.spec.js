@@ -6,7 +6,7 @@ const CheckoutPage = require('../pages/checkout');
 const PaymentPage = require('../pages/payment');
 const DownloadInvoicePage = require('../pages/InvoiceDownload');
 
-const createdUser = require('../test-data/createdUser.json');
+const createdUser = require('../test-data/CreatedUser.json');
 const paymentData = require('../test-data/paymentdataFaker');
 
 test('user can download invoice after purchase', async ({ page }) => {

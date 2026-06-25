@@ -1,7 +1,7 @@
 
 const { test, expect } = require('@playwright/test');
 const  Login  = require('../pages/Login.js');
-const createdUser = require('../test-data/createdUser.json');
+const createdUser = require('../test-data/CreatedUser.json');
 
 
 test('login with user.json credentials', async ({ page }) => {
