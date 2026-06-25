@@ -1,0 +1,27 @@
+{
+
+"Logindata":{
+    "username": "test56@mail.com",
+    "password" : "admin123"
+    
+},
+
+"signupData": {
+    "name": "John Doe",
+    "email": "johndoe12345@mail.com",
+    "password": "Test@1234",
+    "title": "Mr",
+    "day": "15",
+    "month": "May",
+    "year": "1995",
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "QA Solutions",
+    "address": "221B Baker Street",
+    "country": "United States",
+    "state": "California",
+    "city": "Los Angeles",
+    "zipcode": "90001",
+    "mobileNumber": "9876543210"
+  }
+}

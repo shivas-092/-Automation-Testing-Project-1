@@ -1,0 +1,32 @@
+//iframe[@id='hs-form-iframe-0']
+ #email-12301b7e-f7f0-432f-81f9-b5a36a1ba861
+
+
+//input[@id='firstname-12301b7e-f7f0-432f-81f9-b5a36a1ba861']
+//input[@id='lastname-12301b7e-f7f0-432f-81f9-b5a36a1ba861']
+
+//input[@id='email-12301b7e-f7f0-432f-81f9-b5a36a1ba861']
+//input[@id='phone-12301b7e-f7f0-432f-81f9-b5a36a1ba861']
+
+  - waiting for locator('iframe[src*="resources.theplanetgroup.com"]').nth(1).contentFrame().locator('//input[@id='firstname-12301b7e-f7f0-432f-81f9-b5a36a1ba861']')
+
+
+//iframe[@id='hs-form-iframe-0']
+ //iframe[@id='hs-form-iframe-0']
+//iframe[@id='hs-form-iframe-0']
+
+//input[@data-qa='signup-email']
+//button[@type='submit']
+
+id attribute is not available for this element
+name attribute is not available for this element
+//div[@class='orangehrm-login-slot-wrapper']
+
+mon-25
+https status codes and multi tabs redirection
+
+beforeAll: Runs exactly once before any of the tests in the file start executing. It is perfect for heavy setup tasks like launching a database connection, seeding data, or authenticating a global user.
+
+afterAll: Runs exactly once after all the tests in the file have finished executing. It is used for cleanup tasks like closing database connections, deleting temporary test files, or resetting states.
+
+
