@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const AccountApiPage = require('../../API/AccountApi');
+const AccountApiPage = require('../../API/Accountapi');
 
 test('@regression verify post login api', async ({ request }) => {
 
