@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const ProductApiPage = require('../../api/ProductApi');
+const ProductApiPage = require('../../API/ProductApi');
 
 
 test('GET response for products page', async ({ request }) => {

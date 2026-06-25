@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const ProductReviewPage = require('../pages/productReviewSubmission');
+const ProductReviewPage = require('../pages/ProductReviewSubmission');
 const { faker } = require('@faker-js/faker');
 
 test('user can submit product review', async ({ page }) => {
