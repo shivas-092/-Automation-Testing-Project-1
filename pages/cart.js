@@ -3,7 +3,7 @@ class categoryPage {
     constructor(page) {
 
         this.page = page
-      this.men = page.locator("a[href='#Men']");
+      this.men = page.locator('a[href="#Men"]');
         this.tshirt = page.getByRole('link', { name: 'Tshirts' })
         this.cart = page.getByRole('button', { name: 'Add to cart' })
         this.continueShop = page.getByRole('button', { name: 'Continue Shopping' })
@@ -15,9 +15,8 @@ class categoryPage {
     async goto() {
         await this.page.goto('https://automationexercise.com/')
     }
-  async selectMenCategory() {
-    await this.men.scrollIntoViewIfNeeded();
-    await this.men.click();
+ async selectMenCategory() {
+    await this.men.click({ force: true });
 }
 
     async selectTshirts() {
