@@ -106,8 +106,8 @@ module.exports = defineConfig({
 
   use: {
     baseURL: 'https://automationexercise.com',
-    trace: 'on-first-retry',
-    video: 'on'
+    trace: 'retain-on-failure',
+    video: 'retain-on-failure'
   },
 
   projects: [
