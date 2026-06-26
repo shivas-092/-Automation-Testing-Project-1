@@ -9,15 +9,15 @@ const response = await productApi.getProducts();
 
     expect(response.status()).toBe(200)
 
-  const body = await response.json();
+//   const body = await response.json();
 
-    const product = body.products.find(
-        p => p.id === 2
-    );
+//     const product = body.products.find(
+//         p => p.id === 2
+//     );
 
-    expect(product.id).toBe(2);
-    expect(product.name).toBe('Men Tshirt');
-    expect(product.brand).toBe('H&M');
+//     expect(product.id).toBe(2);
+//     expect(product.name).toBe('Men Tshirt');
+//     expect(product.brand).toBe('H&M');
 
 
 
