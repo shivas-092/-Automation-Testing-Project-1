@@ -20,10 +20,7 @@ test('user can download invoice after purchase', async ({ page }) => {
 
     await loginPage.goto();
 
-    await loginPage.login(
-        createdUser.email,
-        createdUser.password
-    );
+    await loginPage.login('test56@mail.com', 'admin123');
 
 
     await categoryPage.selectMenCategory();

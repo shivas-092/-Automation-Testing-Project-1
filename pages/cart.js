@@ -16,13 +16,16 @@ class categoryPage {
         await this.page.goto('https://automationexercise.com/')
     }
  async selectMenCategory() {
-    await this.men.click({ force: true });
+    await this.men.scrollIntoViewIfNeeded();
+     await this.men.click();
+    
 }
 
-    async selectTshirts() {
+    async selectTshirts() { 
     await this.tshirt.waitFor({ state: 'visible' });
-    await this.tshirt.click();
+        await this.tshirt.click();
 }
+
     async viewProduct(productId) {
         await this.page
             .locator(`a[href='/product_details/${productId}']`)

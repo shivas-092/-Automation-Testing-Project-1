@@ -1,38 +1,73 @@
 
+// const { test, expect } = require('@playwright/test');
+// const SignupPage = require('../pages/signup.js');     
+// const { signupData } = require('../test-data/user.json');  
+// const { faker } = require('@faker-js/faker');  
+// const fs = require('fs');
+
+// test('user can signup with valid credentials', async ({ page }) => {
+//   const signupPage = new SignupPage(page);
+//  const randomName = faker.person.fullName();
+//   const randomEmail = faker.internet.email();
+
+//    const finalSignupData = {
+//     ...signupData,           
+//     name: randomName,        
+//     email: randomEmail,      
+//   };
+
+//   fs.writeFileSync(
+//     './test-data/CreatedUser.json',
+//     JSON.stringify(finalSignupData, null, 2)
+//   );
+
+//   await signupPage.goto();
+//   await signupPage.signup(finalSignupData.name, finalSignupData.email);
+//   await signupPage.fillform(finalSignupData);
+//   await signupPage.createAccount();
+
+//   await expect(page.getByText('Account Created!')).toBeVisible();
+// });
+
+
+
+
 const { test, expect } = require('@playwright/test');
-const SignupPage = require('../pages/signup.js');     
-const { signupData } = require('../test-data/user.json');  
-const { faker } = require('@faker-js/faker');  
+const SignupPage = require('../pages/signup.js');
+const { signupData } = require('../test-data/user.json');
+const { faker } = require('@faker-js/faker');
 const fs = require('fs');
+const path = require('path');
 
-test('user can signup with valid credentials', async ({ page }) => {
-  const signupPage = new SignupPage(page);
- const randomName = faker.person.fullName();
-  const randomEmail = faker.internet.email();
+const USERS_FILE = path.join(__dirname, '../test-data/CreatedUser.json');
+const NUMBER_OF_USERS = 10;
 
-   const finalSignupData = {
-    ...signupData,           
-    name: randomName,        
-    email: randomEmail,      
-  };
+for (let i = 0; i < NUMBER_OF_USERS; i++) {
+  test(`signup user #${i + 1}`, async ({ page }) => {
+    const signupPage = new SignupPage(page);
 
-  fs.writeFileSync(
-    './test-data/CreatedUser.json',
-    JSON.stringify(finalSignupData, null, 2)
-  );
+    const finalSignupData = {
+      ...signupData,
+      name: faker.person.fullName(),
+      email: faker.internet.email(),
+    };
 
-  await signupPage.goto();
-  await signupPage.signup(finalSignupData.name, finalSignupData.email);
-  await signupPage.fillform(finalSignupData);
-  await signupPage.createAccount();
+    await signupPage.goto();
+    await signupPage.signup(finalSignupData.name, finalSignupData.email);
+    await signupPage.fillform(finalSignupData);
+    await signupPage.createAccount();
 
-  await expect(page.getByText('Account Created!')).toBeVisible();
-});
+    await expect(page.getByText('Account Created!')).toBeVisible();
 
-
-
-
-
+    let users = [];
+    if (fs.existsSync(USERS_FILE)) {
+      const content = fs.readFileSync(USERS_FILE, 'utf-8');
+      users = content.trim() ? JSON.parse(content) : [];
+    }
+    users.push(finalSignupData);
+    fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
+  });
+}
 
 
 
