@@ -32,8 +32,8 @@ async fillContactForm(data) {
 
 
 async uploadFile(filePath) {
-        await this.upload.setInputFiles('C:\\Users\\ShivasaiBilla\\OneDrive - Planet Equity Group\\Desktop\\project 1\\test-fileuploads\\img1.png');
-    }
+    await this.upload.setInputFiles('test-fileuploads\\img1.png');
+}
 
 
 

@@ -17,7 +17,7 @@ test('contactus', async ({ page }) => {
     await contactUs1.goto()
     await contactUs1.button()
     await contactUs1.fillContactForm(contactData);
-    await contactUs1.uploadFile('C:\\Users\\ShivasaiBilla\\OneDrive - Planet Equity Group\\Desktop\\project 1\\test-fileuploads\\img1.png');
+    await contactUs1.uploadFile('test-fileuploads\\img1.png');
     await contactUs1.clickSubmit();
 
 
