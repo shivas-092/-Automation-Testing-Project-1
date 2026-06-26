@@ -217,7 +217,7 @@ Every push to the `main` branch:
 **Shivasai Billa**
 
 
-QA Engineer | Manual Testing | Playwright Automation | JavaScript
+Quality Analyst | Manual Testing | Playwright Automation | JavaScript
 
 ---
 
