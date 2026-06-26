@@ -17,8 +17,10 @@ test('contactus', async ({ page }) => {
     await contactUs1.goto()
     await contactUs1.button()
     await contactUs1.fillContactForm(contactData);
-    await contactUs1.uploadFile('test-fileuploads\\img1.png');
+    await contactUs1.uploadFile('test-fileuploads/img1.png');
     await contactUs1.clickSubmit();
+
+
 
 
 })

@@ -32,7 +32,7 @@ async fillContactForm(data) {
 
 
 async uploadFile(filePath) {
-    await this.upload.setInputFiles('test-fileuploads\\img1.png');
+    await this.upload.setInputFiles(filePath);
 }
 
 
