@@ -17,7 +17,7 @@ test('user can signup with valid credentials', async ({ page }) => {
   };
 
   fs.writeFileSync(
-    './test-data/createdUser.json',
+    './test-data/CreatedUser.json',
     JSON.stringify(finalSignupData, null, 2)
   );
 
